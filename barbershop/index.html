@@ -4,19 +4,32 @@
     <meta charset="UTF-8">
     <title>Барбершоп "Бородинский"</title>
     <link rel="icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">  
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 </head>
 <body class="page-body">
     <header class="main-header">
         <nav class="main-navigation">
-            <a class="main-header-logo" href="index.html"><img src="img/logo-index.svg" width="368" height="153" alt="Логотип барбершопа 'Бородинский'"></a>
-            <ul class="site-navigation">
-                <li class="site-navigation-item"><a href="blank.html">Информация</a></li>
-                <li class="site-navigation-item"><a href="blank.html">Новости</a></li>
-                <li class="site-navigation-item"><a href="price.html">Прайс-лист</a></li>
-                <li class="site-navigation-item"><a href="catalog.html">Магазин</a></li>
-                <li class="site-navigation-item"><a href="blank.html">Контакты</a></li>
-            </ul>
-            <a class="login-link" href="blank.html">Вход</a>
+            <a class="main-header-logo" href="index.html">
+                <img src="img/logo-index.svg" width="368" height="153" alt="Логотип барбершопа 'Бородинский'">
+            </a>
+            <div class="main-navigation-wrapper">
+                <div class="container">
+                    <ul class="site-navigation">
+                        <li class="site-navigation-item"><a href="blank.html">Информация</a></li>
+                        <li class="site-navigation-item"><a href="blank.html">Новости</a></li>
+                        <li class="site-navigation-item"><a href="price.html">Прайс-лист</a></li>
+                        <li class="site-navigation-item"><a href="catalog.html">Магазин</a></li>
+                        <li class="site-navigation-item"><a href="blank.html">Контакты</a></li>
+                    </ul>
+                    <div class="user-navigation">
+                        <a class="login-link" href="blank.html">Вход</a>
+                    </div> 
+                </div>
+            </div> 
         </nav>
     </header>
     <main class="container">
@@ -38,71 +51,97 @@
                 </li>
             </ul>
         </section>
-        <section class="news">
-            <h2 class="title new-title">Новости</h2>
-            <ul class="news-list">
-                <li class="news-item">
-                    <p class="text news-text">НАМ НАКОНЕЦ ЗАВЕЗЛИ ЯГЕРМАЙСТЕР! ТЕПЕРЬ ВЫ МОЖЕТЕ ПРОПУСТИТЬ СТАКАНЧИК ВО ВРЕМЯ СТРИЖКИ</p>
-                    <time datetime="2020-01-11" class="news-date">11 января</time>
-                </li>
-                <li class="news-item">
-                    <p class="text news-text">В НАШЕЙ КОМАНДЕ ПОПОЛНЕНИЕ, БОРИС «БРИТВА» СТРИГУНЕЦ, ОБЛАДAТЕЛЬ МНОЖЕСТВА ТИТУЛОВ И НАГРАД ПОПОЛНИЛ НАШИ СТРОЙНЫЕ РЯДЫ</p>
-                    <time datetime="2020-01-18"class="news-date">18 января</time>
-                </li>
-            </ul>
-            <a href="blank.html" class="button">Все новости</a>
-        </section>
-        <section class="gallery">
-            <h2 class="title gallery-title">Фотогалерея</h2>
-            <figure class="gallery-content">
-                <a href="#">
-                    <img src="img/studio.jpg" width="286" height="164" alt="Интерьер">
-                </a>
-            </figure>
-            <button class="button gallery-button gallery-button-back" type="button" disabled>Назад</button>
-            <button class="button gallery-button gallery-button-next" type="button">Вперед</button>
-        </section>
-        <section class="contacts">
-            <h2 class="title contact-title">Контактная информация</h2>
-            <p class="text">
-                БАРБЕРШОП «БОРОДИНСКИЙ» АДРЕС: Г.<br>
-                САНКТ-ПЕТЕРБУРГ, Б. КОНЮШЕННАЯ, Д. 19/8<br> ТЕЛЕФОН: <a class="contacts-phone" href="tel:+78126660266">+7 (812) 666-02-66</a> 
-            </p>
-            <p>
-                ВРЕМЯ РАБОТЫ:<br>
-                ПН—ПТ: С 10:00 ДО 22:00<br>
-                СБ—ВС: С 10:00 ДО 19:00
-            </p>
-            <a class="button" href="blank.html">Как проехать</a>
-            <a class="button" href="blank.html">Обратная связь</a>
-        </section>
-        <section class="appointment">
-            <h2>Записаться</h2>
-            <p class="text info-appointment">УКАЖИТЕ ЖЕЛАЕМУЮ ДАТУ И ВРЕМЯ И МЫ СВЯЖЕМСЯ С ВАМИ ДЛЯ ПОДТВЕРЖДЕНИЯ БРОНИ</p>
-            <!--здесь будет форма для записи-->
-        </section>
-    </main>
-    
-        <footer class="main-footer">
-            <section class="footer-contact">
-                <h2 class="titel footer-contact-title">Как нас найти</h2>
-                БАРБЕРШОП «БОРОДИНСКИЙ»<br>
-                АДРЕС: Г. САНКТ-ПЕТЕРБУРГ, УЛ. Б. КОНЮШЕННАЯ, Д. 19/8<br>
-                <a class="footer-address" href="blank.html">КАК НАС НАЙТИ?</a><br> ТЕЛЕФОН: <a class="footer-phone" href="tel:+78126660266">+7 (812) 666-02-66</a> 
-            </section>
-            <section class="footer-social">
-                <h2 class="title social-title">Давайте дружить!</h2>
-                <ul class="social-list">
-                    <li class="social-item"><a class="social-button" href="#">Вконтакте</a></li>
-                    <li class="social-item"><a class="social-button" href="#">Фейсбук</a></li>
-                    <li class="social-item"><a class="social-button" href="#">Инстаграм</a></li>
+        <div class="index-columns">
+            <section class="news">
+                <h2 class="title new-title">Новости</h2>
+                <ul class="news-list">
+                    <li class="news-item">
+                        <p class="text news-text">НАМ НАКОНЕЦ ЗАВЕЗЛИ ЯГЕРМАЙСТЕР! ТЕПЕРЬ ВЫ МОЖЕТЕ ПРОПУСТИТЬ СТАКАНЧИК ВО ВРЕМЯ СТРИЖКИ</p>
+                        <time datetime="2020-01-11" class="news-date">11 января</time>
+                    </li>
+                    <li class="news-item">
+                        <p class="text news-text">В НАШЕЙ КОМАНДЕ ПОПОЛНЕНИЕ, БОРИС «БРИТВА» СТРИГУНЕЦ, ОБЛАДAТЕЛЬ МНОЖЕСТВА ТИТУЛОВ И НАГРАД ПОПОЛНИЛ НАШИ СТРОЙНЫЕ РЯДЫ</p>
+                        <time datetime="2020-01-18"class="news-date">18 января</time>
+                    </li>
                 </ul>
+                <a href="blank.html" class="button">Все новости</a>
             </section>
-            <section class="copyright">
-                <h2>Разработано:</h2>
-                <a class="button" href="https://htmlacademy.ru">HTML Academy</a>
+
+            <section class="gallery">
+                <h2 class="title gallery-title">Фотогалерея</h2>
+                <figure class="gallery-content">
+                    <a href="#">
+                        <img src="img/studio.jpg" width="286" height="164" alt="Интерьер">
+                    </a>
+                </figure>
+                <button class="button gallery-button gallery-button-back" type="button" disabled>Назад</button>
+                <button class="button gallery-button gallery-button-next" type="button">Вперед</button>
             </section>
-        </footer>
+        </div>
+        
+        <div class="index-columns">
+            <section class="contacts">
+                <h2 class="title contact-title">Контактная информация</h2>
+                <p class="text">
+                    БАРБЕРШОП «БОРОДИНСКИЙ» АДРЕС: Г.<br>
+                    САНКТ-ПЕТЕРБУРГ, Б. КОНЮШЕННАЯ, Д. 19/8<br> ТЕЛЕФОН: <a class="contacts-phone" href="tel:+78126660266">+7 (812) 666-02-66</a> 
+                </p>
+                <p>
+                    ВРЕМЯ РАБОТЫ:<br>
+                    ПН—ПТ: С 10:00 ДО 22:00<br>
+                    СБ—ВС: С 10:00 ДО 19:00
+                </p>
+                <a class="button" href="blank.html">Как проехать</a>
+                <a class="button" href="blank.html">Обратная связь</a>
+            </section>
+
+            <section class="appointment">
+                <h2>Записаться</h2>
+                <p class="text info-appointment">УКАЖИТЕ ЖЕЛАЕМУЮ ДАТУ И ВРЕМЯ И МЫ СВЯЖЕМСЯ С ВАМИ ДЛЯ ПОДТВЕРЖДЕНИЯ БРОНИ</p>
+                <form class="appointment-form" action="https://echo.htmlacademy.ru" method="post">
+                  <p class="appointment-item">
+                    <label for="appointment-date">Дата</label>
+                    <input id="appointment-date" type="text" name="date" placeholder="01.01.2020">
+                  </p>
+                  <p class="appointment-item">
+                    <label for="appointment-time">Время</label>
+                    <input id="appointment-time" type="text" name="time" placeholder="10:00">
+                  </p>
+                  <p class="appointment-item">
+                    <label for="appointment-name">Ваше имя</label>
+                    <input id="appointment-name" type="text" name="name" placeholder="Борода">
+                  </p>
+                  <p class="appointment-item">
+                    <label for="appointment-phone">Телефон</label>
+                    <input id="appointment-phone" type="tel" name="phone" placeholder="+7 000 000-00-00">
+                  </p>
+                  <button type="submit" class="button">Отправить</button>
+                </form>
+            </section>
+        </div>
+        
+    </main>
+
+    <footer class="main-footer">
+        <section class="footer-contacts">
+            <h2 class="titel footer-contact-title">Как нас найти</h2>
+            БАРБЕРШОП «БОРОДИНСКИЙ»<br>
+            АДРЕС: Г. САНКТ-ПЕТЕРБУРГ, УЛ. Б. КОНЮШЕННАЯ, Д. 19/8<br>
+            <a class="footer-address" href="blank.html">КАК НАС НАЙТИ?</a><br> ТЕЛЕФОН: <a class="footer-phone" href="tel:+78126660266">+7 (812) 666-02-66</a> 
+        </section>
+        <section class="footer-social">
+            <h2 class="title social-title">Давайте дружить!</h2>
+            <ul class="social-list">
+                <li class="social-item"><a class="social-button" href="#">Вконтакте</a></li>
+                <li class="social-item"><a class="social-button" href="#">Фейсбук</a></li>
+                <li class="social-item"><a class="social-button" href="#">Инстаграм</a></li>
+            </ul>
+        </section>
+        <section class="footer-copyright">
+            <h2>Разработано:</h2>
+            <a class="button" href="https://htmlacademy.ru">HTML Academy</a>
+        </section>
+    </footer>
 
         <section class="modal modal-login">
             <h2 class="title modal-title">Личный кабинет</h2>
@@ -110,23 +149,19 @@
             <form class="login-form" action="https://echo.htmlacademy.ru">
                 <p>
                     <label for="login-login">Логин</label>
-                    <input id="login-login" type="email" name="login" placeholder="email@example.com">
+                    <input class="login-icon-user" id="login-login" type="email" name="login" placeholder="email@example.com">
                 </p>
-
                 <p>
-                    <label for="login-password">Пароль</label>
-                    <input id="login-password" type="password" name="password" placeholder="******">
+                    <label for="login-password">Логин</label>
+                    <input class="login-icon-password" id="login-password" type="password" name="password" placeholder="********">
                 </p>
-                    
-                <p>
-                   <label>
+                <p class="login-help">
+                    <label class="login-checkbox">
                         <input type="checkbox" name="remember">
-                        Запомнить меня
-                    </label> 
-                    <a class="" href="blank.html">Я забыл пароль!</a>
+                        Запомните меня
+                    </label>
+                    <a href="#" class="restore">Я забыл пароль</a>
                 </p>
-
-                <button type="submit">Войти</button>
             </form>
             <button class="modal-close" type="button">Закрыть</button>
         </section>
@@ -136,6 +171,5 @@
             <!--зжесь будет карта-->
             <button class="modal-close" type="button">Закрыть</button>
         </section>
-    
+
 </body>
-</html>
